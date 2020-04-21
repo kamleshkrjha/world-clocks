@@ -11,7 +11,7 @@ class App extends React.Component {
             <div className={styles.container} >
                 <Clock place="New york" timeDiff="-0500" />
                 <Clock place="London" timeDiff="+0000" />
-                <Clock place="CPH" timeDiff="+0100" /> 
+                <Clock place="Copenhagen" timeDiff="+0100" /> 
                 <Clock place="Delhi" timeDiff="+0530" />
                 <Clock place="Beijing" timeDiff="+0800" />
                 <Clock place="Canberra" timeDiff="+1100" />   
