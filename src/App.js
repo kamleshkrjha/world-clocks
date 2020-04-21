@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Clock } from './components';
+
+import styles from './App.module.css';
+
+class App extends React.Component {
+
+    render() {
+        return (
+            <div className={styles.container} >
+                <Clock place="New york" timeDiff="-0500" />
+                <Clock place="London" timeDiff="+0000" />
+                <Clock place="CPH" timeDiff="+0100" /> 
+                <Clock place="Delhi" timeDiff="+0530" />
+                <Clock place="Beijing" timeDiff="+0800" />
+                <Clock place="Canberra" timeDiff="+1100" />   
+            </div>
+        )
+    }
 }
 
 export default App;
