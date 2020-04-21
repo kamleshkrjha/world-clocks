@@ -1,13 +1,11 @@
 import React from 'react';
 import moment from 'moment';
-// import ad from './assets/flags/43/ad.svg';
 import styles from './clock.module.css';
 
 export default class Clock extends React.Component {
     constructor(props) {
         super(props);
-        this.state  = { date: this.setDate(props.timeDiff)};
-       
+        this.state  = { date: this.setDate(props.timeDiff)};  
     }
 
     setDate (timeDiff) {
@@ -113,14 +111,15 @@ export default class Clock extends React.Component {
     }
 
     render (){
+        const flagUrl = `https://www.countryflags.io/${this.props.code}/flat/64.png`;
         return (
                 <div className={styles.clock}>
-                  <label>
-                    {/* <img src={ ad } alt="" height="18"/> */}
+                  <label className={styles.flexContainerCentered}>
+                    <img src={flagUrl} alt="" height="18" className={styles.image}></img>
                     <span className={styles.header}>{ this.props.place }</span>
                   </label>
                   
-                  <h4> { this.state.date.format('LTS') }</h4>
+                  <h4> { this.state.date.format('DD-MMM-YYYY HH:mm:ss') }</h4>
                   
                   <canvas ref="canvas" width={150} height={150}>
                   </canvas>

@@ -1,5 +1,5 @@
 .clock {
-    background: blue;
+    background: rgb(60, 63, 60);
     color: white;
     padding: 10px;
     word-wrap: break-word;
@@ -9,5 +9,15 @@
 
 .header {
     padding-left: 10px;
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.flexContainerCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    height: 24px;
 }
